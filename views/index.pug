@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    <div class="container"> 
+    if bars
+        each bar in bars
+            <div class="media" id="#{bar.id}">
+                <img class="pull-left media-object img-responsive" src="#{bar.image_url}" alt="Bar Image">
+                <div class="media-body">
+                     
+                    if bar.attending
+                        <h4 class="media-heading">#{bar.name} <small class="counter">#{bar.attending.length} coming</small></h4>
+                        each person in bar.attending
+                            if person === currentName
+                                <span class="attending itsme">#{person}</span>
+                            else
+                                <span class="attending">#{person}</span>
+                    else
+                        <h4 class="media-heading">#{bar.name} <small class="counter">0 coming</small></h4>
+                </div>
+            </div>
+        if currentName
+            script var username = "#{currentName}";
+        if !currentName
+            script var username = false;
+    </div>

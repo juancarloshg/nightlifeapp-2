@@ -1,0 +1,37 @@
+.dropdown-menu {
+  padding: 20px;
+}
+
+.media {
+  margin-bottom: 50px;
+}
+
+.media-object {
+  width: 120px;
+  height: 80px;
+}
+
+.counter {
+  margin-left: 5px;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.media-heading a:hover {
+  text-decoration: none;
+}
+
+.attending {
+  font-size: 18px;
+  border-radius: 10%;
+  margin-right: 5px;
+  padding: 3px;
+  background: royalblue;
+  color: white;
+}
+
+.itsme {
+  background: darkblue;
+}
