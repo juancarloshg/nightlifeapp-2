@@ -14,7 +14,7 @@ router.get("/search/:search", function(req, res, next){
     // we get the search parameter
     if (req.params.search) {
         var yelp = new Yelp({
-          access_token: process.ENV.YELP_TOKEN
+          access_token: process.env.YELP_TOKEN
         })
 
        yelp.search({ term: 'bar', location: req.params.search })
